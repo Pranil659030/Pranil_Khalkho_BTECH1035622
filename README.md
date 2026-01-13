@@ -192,5 +192,9 @@ This project can be deployed on **Heroku, Vercel, or AWS**. Ensure that your fro
 
 ---
 
+👨‍💻 Author
 
+Pranil Khalkho
+
+---
 
