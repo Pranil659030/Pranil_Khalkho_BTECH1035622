@@ -192,10 +192,5 @@ This project can be deployed on **Heroku, Vercel, or AWS**. Ensure that your fro
 
 ---
 
-## 📝 License
-
-MIT License – Free to use and modify
-
----
 
 
