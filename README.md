@@ -1,51 +1,50 @@
 # 🗂️ Task Manager – Full Stack Kanban Application
 
-A full-stack **Task Management (Kanban) application** that allows users to manage tasks efficiently with authentication, drag-and-drop task movement, real-time activity tracking, and profile management.
+A modern **Task Management (Kanban) application** that helps users organize tasks efficiently. Features include secure authentication, drag-and-drop task movement, real-time activity tracking, and profile management.
 
-This project demonstrates **modern full-stack development practices** using **Node.js, Express, MongoDB, and React**.
+This project demonstrates **full-stack development best practices** using **Node.js, Express, MongoDB, and React**.
 
 ---
 
 ## 🚀 Project Overview
 
-The Task Manager application enables users to:
+The Task Manager app allows users to:
 
-- Sign up and log in securely
-- Create, update, delete tasks
-- Organize tasks using a **Kanban board**
-- Drag and drop tasks between statuses
-- Track **Recent Activity** automatically
-- Update password and delete profile
-- View personalized dashboard
+* Sign up and log in securely
+* Create, edit, and delete tasks
+* Organize tasks on a **Kanban board**
+* Drag and drop tasks between different statuses
+* Automatically track **recent activity**
+* Update password or delete their profile
+* Access a personalized dashboard
 
-Each user has **isolated data**, ensuring privacy and security.
+Each user has **isolated data**, ensuring full privacy and security.
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **React (Vite)**
-- **React Router DOM**
-- **Tailwind CSS**
-- **@hello-pangea/dnd** (Drag & Drop)
-- **Axios**
+
+* **React (Vite)** – Fast, modern React setup
+* **React Router DOM** – Page navigation
+* **Tailwind CSS** – Utility-first styling
+* **@hello-pangea/dnd** – Drag-and-drop functionality
+* **Axios** – API requests
 
 ### Backend
-- **Node.js**
-- **Express.js**
-- **MongoDB**
-- **Mongoose**
-- **JWT (Authentication)**
-- **bcrypt (Password hashing)**
+
+* **Node.js** – Server runtime
+* **Express.js** – API framework
+* **MongoDB & Mongoose** – Database and schema modeling
+* **JWT** – Authentication
+* **bcrypt** – Password hashing
 
 ---
 
 ## 📁 Project Structure
 
-
-
-## 📁 Frontend Folder Structure
+### Frontend Folder Structure
 
 ```text
 frontend/
@@ -76,7 +75,8 @@ frontend/
 └── package.json
 ```
 
-## 📁 Backend Folder Structure
+### Backend Folder Structure
+
 ```text
 backend/
 ├── src/
@@ -105,22 +105,97 @@ backend/
 │
 ├── .env                         # Environment variables
 └── package.json                 # Dependencies & scripts
+```
 
+---
+
+## ⚙️ Backend Setup Instructions
+
+1. **Install dependencies:**
+
+```bash
+cd backend
+npm install
 ```
+
+2. **Configure environment variables:**
+
+Create a `.env` file in the `backend/` folder with the following:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+FRONTEND_URL=http://localhost:5173
 ```
-    npm install
-```
-``` 
-    PORT=5000
-    MONGO_URI=your_mongodb_connection_string
-    JWT_SECRET=your_jwt_secret
-    FRONTEND_URL=http://localhost:5173
-```
-```
+
+3. **Start the backend server:**
+
+```bash
 npm start
 ```
+
+4. **Access the API:**
+
 ```
 http://localhost:5000
 ```
 
-# Frontend Setup Instructions
+---
+
+## ⚙️ Frontend Setup Instructions
+
+1. **Install dependencies:**
+
+```bash
+cd frontend
+npm install
+```
+
+2. **Start the frontend development server:**
+
+```bash
+npm run dev
+```
+
+3. **Open in browser:**
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🖼️ Features
+
+* **User Authentication:** Signup, login, and JWT-based secure sessions
+* **Task Management:** Create, update, delete tasks
+* **Kanban Board:** Drag-and-drop tasks between columns
+* **Recent Activity:** Automatic activity log for every action
+* **Profile Management:** Update password or delete profile
+* **Personal Dashboard:** View your tasks and progress at a glance
+
+---
+
+## 💻 Future Enhancements
+
+* Add **real-time collaboration** for multiple users using WebSockets
+* Enable **notifications** for task deadlines
+* Integrate **analytics** to track task completion trends
+* Add **dark mode** for a better user experience
+
+---
+
+## 📂 Deployment
+
+This project can be deployed on **Heroku, Vercel, or AWS**. Ensure that your frontend and backend URLs are properly configured in `.env` files for production.
+
+---
+
+## 📝 License
+
+MIT License – Free to use and modify
+
+---
+
+
