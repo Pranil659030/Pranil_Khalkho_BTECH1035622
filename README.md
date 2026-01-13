@@ -1,154 +1,126 @@
-# 🗂️ Kanban Task Manager – Full Stack Application
+# 🗂️ Task Manager – Full Stack Kanban Application
 
-A full-stack Kanban Task Management application that allows users to manage tasks efficiently with authentication, drag-and-drop task movement, and a responsive UI.
+A full-stack **Task Management (Kanban) application** that allows users to manage tasks efficiently with authentication, drag-and-drop task movement, real-time activity tracking, and profile management.
 
----
-
-## 🚀 Features
-
-### Authentication & User Management
-- User Signup & Login (JWT Authentication)
-- Logout
-- Edit & Delete Profile
-- User-specific tasks
-
-### Kanban Task Board
-- Three columns:
-  - Pending
-  - In Progress
-  - Completed
-- Drag & drop tasks between columns
-- Task status updates persist in backend
-- Mobile responsive layout
-
-### Task Management
-- Create, Read, Update, Delete tasks
-- Filter tasks by status
-- Each task contains:
-  - Title
-  - Description
-  - Status
-  - Due Date
-  - Created At
+This project demonstrates **modern full-stack development practices** using **Node.js, Express, MongoDB, and React**.
 
 ---
 
-## 🛠 Tech Stack
+## 🚀 Project Overview
+
+The Task Manager application enables users to:
+
+- Sign up and log in securely
+- Create, update, delete tasks
+- Organize tasks using a **Kanban board**
+- Drag and drop tasks between statuses
+- Track **Recent Activity** automatically
+- Update password and delete profile
+- View personalized dashboard
+
+Each user has **isolated data**, ensuring privacy and security.
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
-- React (Vite)
-- Tailwind CSS
-- Axios
-- @hello-pangea/dnd
-- React Icons
+- **React (Vite)**
+- **React Router DOM**
+- **Tailwind CSS**
+- **@hello-pangea/dnd** (Drag & Drop)
+- **Axios**
 
 ### Backend
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JWT Authentication
-- bcrypt
-- CORS
+- **Node.js**
+- **Express.js**
+- **MongoDB**
+- **Mongoose**
+- **JWT (Authentication)**
+- **bcrypt (Password hashing)**
 
 ---
 
-## 📂 Project Structure
-
-kanban-task-manager/
-│── frontend/
-│── backend/
-│── README.md
-│── .gitignore
+## 📁 Project Structure
 
 
----
 
-## ⚙️ Setup Instructions
+## 📁 Frontend Folder Structure
 
-### Backend Setup
+```text
+frontend/
+├── src/
+│   ├── api/
+│   │   ├── axios.js             # Axios configuration
+│   │   └── tasks.js             # Task-related API calls
+│   │
+│   ├── auth/
+│   │   └── AuthContext.jsx      # Authentication context
+│   │
+│   ├── components/
+│   │   ├── KanbanBoard.jsx      # Kanban board layout
+│   │   ├── TaskCard.jsx         # Task card component
+│   │   ├── CreateTask.jsx       # Create task modal
+│   │   └── RecentActivity.jsx   # Recent activity panel
+│   │
+│   ├── pages/
+│   │   ├── Login.jsx            # Login page
+│   │   ├── Signup.jsx           # Signup page
+│   │   ├── Dashboard.jsx        # Main dashboard
+│   │   └── Profile.jsx          # Profile management
+│   │
+│   ├── App.jsx                  # App routes
+│   └── main.jsx                 # React entry point
+│
+├── index.html
+└── package.json
+```
 
-```bash
-cd backend
-npm install
+## 📁 Backend Folder Structure
+```text
+backend/
+├── src/
+│   ├── config/
+│   │   └── db.js                # MongoDB connection
+│   │
+│   ├── models/
+│   │   ├── User.js              # User schema
+│   │   └── Task.js              # Task schema
+│   │
+│   ├── middleware/
+│   │   └── auth.middleware.js   # JWT authentication middleware
+│   │
+│   ├── controllers/
+│   │   ├── auth.controller.js   # Signup, login, logout
+│   │   ├── user.controller.js   # Profile update & delete
+│   │   └── task.controller.js   # Task CRUD logic
+│   │
+│   ├── routes/
+│   │   ├── auth.routes.js       # Auth routes
+│   │   ├── user.routes.js       # User routes
+│   │   └── task.routes.js       # Task routes
+│   │
+│   ├── app.js                   # Express app configuration
+│   └── server.js                # Server entry point
+│
+├── .env                         # Environment variables
+└── package.json                 # Dependencies & scripts
 
-Create a .env file inside backend folder:
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-
-
-Start backend server:
-npm run dev
-
-Backend runs on:
+```
+```
+    npm install
+```
+``` 
+    PORT=5000
+    MONGO_URI=your_mongodb_connection_string
+    JWT_SECRET=your_jwt_secret
+    FRONTEND_URL=http://localhost:5173
+```
+```
+npm start
+```
+```
 http://localhost:5000
+```
 
-Frontend Setup
-cd frontend
-npm install
-npm run dev
-
-Frontend runs on:
-http://localhost:5173
-
-🔐 Environment Variables
-
-Backend .env file:
-MONGO_URI=
-JWT_SECRET=
-PORT=
-
-🧪 API Endpoints
-Auth Routes
-POST   /api/auth/signup
-POST   /api/auth/login
-GET    /api/auth/profile
-PUT    /api/auth/profile
-DELETE /api/auth/profile
-
-
-Task Routes
-GET    /api/tasks
-POST   /api/tasks
-PUT    /api/tasks/:id
-DELETE /api/tasks/:id
-
-
-🌐 Deployment
-
-Frontend: Vercel / Netlify
-
-Backend: Render / Railway
-
-Database: MongoDB Atlas
-
-
-👨‍💻 Author
-
-Pranil Khalkho
-
-If you like this project, give it a star on GitHub!
-
----
-
-✅ This README is:
-- Professional  
-- Interview-ready  
-- GitHub-friendly  
-- Beginner-friendly  
-
----
-
-If you'd like, I can also generate:
-- `.gitignore`
-- `LICENSE`
-- `CONTRIBUTING.md`
-- Deployment guide (Vercel + Render)
-
-Just tell me what you want next 🚀
-
-
-
-
-
+# Frontend Setup Instructions
